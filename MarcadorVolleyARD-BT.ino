@@ -221,7 +221,7 @@ void desplazamiento(int dato, int posicion){
 void sumar(int lado){
    if(lado==0){
       if(CambioI == 1){
-         if(MarcadorI < tope1 || MarcadorI < tope2){
+         if(MarcadorI < tope1 || MarcadorI < tope2 || MarcadorI < tope3){
             MarcadorI += 1;
             marcador[0] = MarcadorI/10;
             marcador[1] = MarcadorI%10;
@@ -236,7 +236,7 @@ void sumar(int lado){
    }
    else{
       if(CambioD == 1){
-         if(MarcadorD < tope1 || MarcadorD < tope2){
+         if(MarcadorD < tope1 || MarcadorD < tope2 || MarcadorI < tope3){
             MarcadorD += 1;
             marcador[2] = MarcadorD/10;
             marcador[3] = MarcadorD%10;
@@ -251,7 +251,7 @@ void sumar(int lado){
    }
    //Validar  con el Tope
    if(setI + setD <2){
-      if(MarcadorI == tope1 || MarcadorD == tope1){
+      if(MarcadorI == tope1 || MarcadorD == tope1 || MarcadorI == tope2 || MarcadorD == tope2 ){
          if(lado == 0){
             setI += 1;
             CambioD = 1;
